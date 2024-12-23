@@ -1,0 +1,95 @@
+
+*{
+    margin: 1px;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Inter, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-content: center; 
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    height: 5rem;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+header > img{
+    max-width: 2.5rem;
+}
+
+header > h1{
+    font-weight: 350;
+}
+
+.add-ingredient-form{
+    display: flex;
+    height: 8rem;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 3rem 2rem 2rem;
+}
+
+.add-ingredient-form > input{
+    padding: 1rem;
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    flex-grow: 1;
+    min-width: 100px;
+    max-width: 400px;
+    border-radius: 0.3rem;
+    border-width: 0.05rem;
+    max-height: 3rem;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    border: 1px solid #D1D5DB;
+}
+
+.add-ingredient-form > button{
+    font-family: Inter, sans-serif;
+    border-radius: 0.3rem;
+    border: none;
+    color: white;
+    background-color: black;
+    font-size: 0.775rem;
+    font-weight: 500;
+    width: 150px;
+    max-height: 3rem;
+    
+}
+
+.add-ingredient-form > button::before{
+    content: "+";
+    margin-right: 0.2rem;
+}
+
+ul{
+    list-style: disc;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.r-buttons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+}
+
+label{
+    padding-left: 10px;
+}
+
+input[type="radio"]{
+    padding-right: 10px;
+}
