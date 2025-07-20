@@ -17,7 +17,7 @@ function App() {
     <>
       <form className="add-ingredient-form" action={getIngredient}>
         <input
-          type="text"
+          type="text" 
           name="ingredient"
           placeholder="eg: cheese"
           aria-label="Add ingredients"
@@ -25,44 +25,26 @@ function App() {
         <button>Add ingredient</button>
       </form>
 
-      <ul>{listOfIngredient}</ul>
-      
-      <label className="description" htmlFor="description">
-        Description :
-        <textarea name="description" id="description"></textarea>
-      </label>
-      
-      
-      <fieldset className="r-buttons">
-      <label >
-      <input type="radio" name="category" value="General" />
-        General
-      </label>
+      {ingredient.length > 0 && (
+        <section>
+          <div className="ingredient-list-div">
 
-      <label >
-      <input type="radio" name="category" value="OBC" />
-        OBC
-      </label>
+          <h1>Ingredients on hand : </h1>
 
-      <label >
-      <input type="radio" name="category" value="ST" />
-        ST
-      </label>
+          <ul className="ingredient-list">{listOfIngredient}</ul>
+          </div>
 
-      <label >
-      <input type="radio" name="category" value="SC" />
-        SC
-      </label>
-
-      <label >
-      <input type="radio" name="category" value="Others" />
-      Others
-      </label>
-      </fieldset>
-
-      </>
-    
-  )
+          <div className="recipe-button-div">
+            <div>
+            <h2>Ready for a recipe?</h2>
+            <p>Generate a recipe from your list of ingredient.</p>
+            </div>
+            <button className="get-recipe-button">Get a recipe</button>
+          </div>
+        </section>
+      )}
+    </>
+  );
 }
 
 export default App;
